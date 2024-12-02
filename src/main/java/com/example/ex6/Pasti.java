@@ -2,12 +2,15 @@ package com.example.ex6;
 
 public class Pasti extends Viaggi{
     private boolean pensioneCompleata;
-    public Pasti(double c, boolean pC, int d){
-        pensioneCompleata=pC;
-        if(pC)
-            costo=c+(35*durata);
+    public Pasti(){
+    }
+    public double calcolaCosto ( boolean a){
+        double c;
+        if (a)
+            c = costo + (durata*35);
         else
-            costo=c+(25*durata);
+            c = costo + (25*durata);
+        return c;
     }
     public void setPensioneCompleata(boolean pC){
         pensioneCompleata=pC;

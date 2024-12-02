@@ -18,7 +18,7 @@ public class Viaggi {
     public void setDurata(int d){
         durata=d;
     }
-    public void setCosto(int c){
+    public void setCosto(double c){
         costo=c;
     }
     public String getDestinazione(){

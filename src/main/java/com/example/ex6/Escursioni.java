@@ -1,10 +1,14 @@
 package com.example.ex6;
 
-public class Escursioni extends Viaggi{
+public class Escursioni extends Pasti{
     private int escursioni;
-    public Escursioni(int e){
-        escursioni=e;
-        costo=costo+(costo+(e*15));
+    public Escursioni(){
+    }
+    public double calcolaCosto (){
+        double c;
+            c = costo +(costo*(escursioni*15));
+            c = costo + (25*durata);
+        return c;
     }
     public void setEscursioni(int e){
         escursioni=e;

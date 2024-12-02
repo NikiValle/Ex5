@@ -2,15 +2,15 @@ package com.example.ex6;
 
 public class Volo extends Viaggi{
     public boolean andataRitorno;
-    public Volo(double c, boolean aR){
-        if(aR)
-            costo=c+(c*85);
-        else
-            costo=c+(c*50);
-        andataRitorno=aR;
+    public Volo() {
     }
-    public Volo(){
-
+    public double calcolaCosto ( boolean a){
+        double c;
+            if (a)
+                c = costo + (costo * 85);
+            else
+                c = costo + (costo * 50);
+            return c;
     }
     public void setAndataRitorno(boolean aR){
         andataRitorno=aR;
