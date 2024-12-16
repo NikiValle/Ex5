@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.ex6.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="779.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="172.0" prefWidth="974.0">
+         <children>
+            <ChoiceBox prefWidth="150.0" />
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="132.0" prefWidth="166.0">
+               <children>
+                  <Label text="Destinazione" />
+                  <TextField />
+                  <Label text="Durata in giorni" />
+                  <TextField />
+                  <Label text="Costo" />
+                  <TextField />
+               </children>
+            </VBox>
+            <CheckBox mnemonicParsing="false" text="Andata e ritorno" />
+            <CheckBox mnemonicParsing="false" text="Pensione completa" />
+            <TextField prefHeight="25.0" prefWidth="40.0" />
+            <Label text="Numero escursioni" />
+         </children>
+      </HBox>
+      <TextArea prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="974.0">
+         <children>
+            <CheckBox mnemonicParsing="false" text="Volo" />
+            <CheckBox mnemonicParsing="false" text="Pasti" />
+            <CheckBox mnemonicParsing="false" text="Escursione" />
+         </children>
+      </HBox>
+   </children>
 </VBox>

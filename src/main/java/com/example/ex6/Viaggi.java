@@ -30,7 +30,16 @@ public abstract class Viaggi {
     public double getCosto(){
         return costo;
     }
-    public abstract boolean equals(Object o);
-    public abstract String toString();
-    public abstract double calcolaCosto ();
+    public boolean equals(Object o){
+        if(o instanceof Viaggi){
+            if(destinazione.equalsIgnoreCase(((Viaggi) o).destinazione)&&durata==((Viaggi) o).durata&&costo==((Viaggi) o).costo){
+                return true;
+            }
+        }
+        return false;
+    }
+    public String toString(){
+        return "Destinzazione: "+destinazione+", durata: "+durata+" giorni, costo: "+costo;
+    }
+    public abstract double calcolaCosto();
 }

@@ -4,10 +4,11 @@ public class Escursioni extends Pasti{
     private int escursioni;
     public Escursioni(){
     }
-    public Escursioni(String des, int dur, double c, int e){
+    public Escursioni(String des, int dur, double c,boolean pC, int e){
         destinazione=des;
         durata=dur;
         costo=c;
+        setPensioneCompleta(pC);
         escursioni=e;
         costo=calcolaCosto();
     }
@@ -25,13 +26,13 @@ public class Escursioni extends Pasti{
     }
     public boolean equals(Object o){
         if(o instanceof Escursioni){
-            if(destinazione.equalsIgnoreCase(((Viaggi) o).destinazione)&&durata==((Viaggi) o).durata&&costo==((Viaggi) o).costo&&escursioni==((Escursioni) o).escursioni){
+            if(super.equals(o)&&escursioni==((Escursioni) o).escursioni){
                 return true;
             }
         }
         return false;
     }
     public String toString(){
-        return "Destinzazione: "+destinazione+", durata: "+durata+" giorni, costo: "+costo+", numero di escursioni: "+escursioni;
+        return super.toString()+", numero di escursioni: "+escursioni;
     }
 }

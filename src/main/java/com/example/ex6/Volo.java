@@ -32,7 +32,7 @@ public class Volo extends Viaggi{
     }
     public boolean equals(Object o){
         if(o instanceof Volo){
-            if(destinazione.equalsIgnoreCase(((Viaggi) o).destinazione)&&durata==((Viaggi) o).durata&&costo==((Viaggi) o).costo&&andataRitorno==((Volo) o).andataRitorno){
+            if(super.equals(o)&&andataRitorno==((Volo) o).andataRitorno){
                 return true;
             }
         }
@@ -44,6 +44,6 @@ public class Volo extends Viaggi{
             a=", andata e ritorno";
         else
             a=", solo andata";
-        return "Destinzazione: "+destinazione+", durata: "+durata+" giorni, costo: "+costo+a;
+        return super.toString()+a;
     }
 }

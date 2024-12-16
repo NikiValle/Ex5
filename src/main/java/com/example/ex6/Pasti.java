@@ -27,7 +27,7 @@ public class Pasti extends Viaggi{
     }
     public boolean equals(Object o){
         if(o instanceof Pasti){
-            if(destinazione.equalsIgnoreCase(((Viaggi) o).destinazione)&&durata==((Viaggi) o).durata&&costo==((Viaggi) o).costo&& pensioneCompleta ==((Pasti) o).pensioneCompleta){
+            if(super.equals(o)&&pensioneCompleta==((Pasti) o).pensioneCompleta){
                 return true;
             }
         }
@@ -39,6 +39,6 @@ public class Pasti extends Viaggi{
             a=", pensione completa";
         else
             a=", mezza pensione";
-        return "Destinzazione: "+destinazione+", durata: "+durata+" giorni, costo: "+costo+a;
+        return super.toString()+a;
     }
 }
