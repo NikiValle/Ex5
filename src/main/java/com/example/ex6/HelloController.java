@@ -57,7 +57,12 @@ public class HelloController {
         output.setText(s);
     }
     @FXML
-    protected void onMaximumCostButtonClick(){
-
+    protected void onMediumCostsButtonClick(){
+        output.setText(a.calculateMediumCosts());
+    }
+    @FXML
+    protected void onMinMaxButtonClick(){
+        output.setText("Costo più alto: "+a.maxCost().getCosto()+", pacchetto: "+a.maxCost().toString()+"\n" +
+                       "Costo più basso: "+a.minCost().getCosto()+", pacchetto: "+a.minCost().toString());
     }
 }
