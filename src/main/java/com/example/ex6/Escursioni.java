@@ -4,6 +4,13 @@ public class Escursioni extends Pasti{
     private int escursioni;
     public Escursioni(){
     }
+    public Escursioni(String des, int dur, double c, int e){
+        destinazione=des;
+        durata=dur;
+        costo=c;
+        escursioni=e;
+        costo=calcolaCosto();
+    }
     public double calcolaCosto (){
         double c;
             c = costo +(costo*(escursioni*15));

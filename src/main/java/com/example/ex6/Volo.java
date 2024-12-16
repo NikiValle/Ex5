@@ -4,9 +4,16 @@ public class Volo extends Viaggi{
     public boolean andataRitorno;
     public Volo() {
     }
-    public double calcolaCosto ( boolean a){
+    public Volo(String des, int dur, double c, boolean aR){
+        destinazione=des;
+        durata=dur;
+        costo=c;
+        andataRitorno=aR;
+        costo=calcolaCosto();
+    }
+    public double calcolaCosto (){
         double c;
-            if (a)
+            if (andataRitorno)
                 c = costo + (costo * 85);
             else
                 c = costo + (costo * 50);
